@@ -1,0 +1,11 @@
+---
+applications:
+- name: community-stage
+  memory: 512M
+  instances: 1
+  host: community-stage
+  command: ./cf-start
+services:
+- community-redis
+- community-db
+- email
