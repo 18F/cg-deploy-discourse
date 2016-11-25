@@ -1,0 +1,12 @@
+---
+applications:
+- name: community-prod-worker
+  memory: 512M
+  instances: 1
+  command: bundle exec sidekiq -e $RAILS_ENV
+  health-check-type: none
+  no-route: true
+services:
+- community-redis
+- community-db
+- email

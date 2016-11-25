@@ -1,0 +1,11 @@
+---
+applications:
+- name: community-prod
+  memory: 512M
+  instances: 3
+  host: community
+  command: ./cf-start
+services:
+- community-redis
+- community-db
+- email
