@@ -1,6 +1,6 @@
 ---
 applications:
-- name: community-stage-worker
+- name: community-staging-worker
   memory: 512M
   instances: 1
   command: bundle exec sidekiq -e $RAILS_ENV
