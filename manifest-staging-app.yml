@@ -1,9 +1,9 @@
 ---
 applications:
-- name: community-stage
+- name: community-staging
   memory: 512M
   instances: 1
-  host: community-stage
+  host: community-staging
   command: ./cf-start
 services:
 - community-redis

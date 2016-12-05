@@ -18,6 +18,8 @@ jobs:
         current_app_name: community-staging
         environment_variables:
           ADMIN_EMAIL: {{admin-email-staging}}
+          DISCOURSE_SMTP_ADDRESS: {{smtp-address-staging}}
+          DISCOURSE_SMTP_PORT: {{smtp-port-staging}}
     - put: deploy-community-staging
       params:
         manifest: discourse-config/manifest-staging-worker.yml
@@ -62,6 +64,8 @@ jobs:
         current_app_name: community-production
         environment_variables:
           ADMIN_EMAIL: {{admin-email-production}}
+          DISCOURSE_SMTP_ADDRESS: {{smtp-address-production}}
+          DISCOURSE_SMTP_PORT: {{smtp-port-production}}
     - put: deploy-community-production
       params:
         manifest: discourse-config/manifest-prod-worker.yml
