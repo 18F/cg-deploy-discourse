@@ -8,4 +8,3 @@ applications:
 services:
 - community-redis
 - community-db
-- email
