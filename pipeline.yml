@@ -18,7 +18,10 @@ jobs:
         current_app_name: community-staging
         environment_variables:
           ADMIN_EMAIL: {{admin-email-staging}}
+          DISCOURSE_SMTP_DOMAIN: {{smtp-domain-staging}}
           DISCOURSE_SMTP_ADDRESS: {{smtp-address-staging}}
+          DISCOURSE_SMTP_USERNAME: {{smtp-username-staging}}
+          DISCOURSE_SMTP_PASSWORD: {{smtp-password-staging}}
           DISCOURSE_SMTP_PORT: {{smtp-port-staging}}
     - put: deploy-community-staging
       params:
@@ -64,7 +67,10 @@ jobs:
         current_app_name: community-production
         environment_variables:
           ADMIN_EMAIL: {{admin-email-production}}
+          DISCOURSE_SMTP_DOMAIN: {{smtp-domain-production}}
           DISCOURSE_SMTP_ADDRESS: {{smtp-address-production}}
+          DISCOURSE_SMTP_USERNAME: {{smtp-username-production}}
+          DISCOURSE_SMTP_PASSWORD: {{smtp-password-production}}
           DISCOURSE_SMTP_PORT: {{smtp-port-production}}
     - put: deploy-community-production
       params:
