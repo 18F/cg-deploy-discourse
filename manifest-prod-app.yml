@@ -1,6 +1,7 @@
 ---
 applications:
 - name: community-prod
+  domain: unique-example.com
   memory: 512M
   instances: 3
   host: community
